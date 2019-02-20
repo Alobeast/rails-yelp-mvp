@@ -1,0 +1,12 @@
+<h1>Nos Restaurants!</h1>
+<p>(★^O^★)</p>
+
+<ul>
+<% @restaurants.each do |restaurant| %>
+<li><%= restaurant.name %>
+  <%= link_to "allez voir!", restaurant_path(restaurant.id) %>
+</li>
+<% end %>
+</ul>
+
+<%= link_to "Mettre un nouveau resto en dedans", new_restaurant_path, class: "btn btn-primary" %>
